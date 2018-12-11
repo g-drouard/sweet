@@ -1,0 +1,55 @@
+@import "../utils";
+
+#welcome-dialog md-toolbar {
+    background-color: color(button, base);
+}
+
+#dialogContent_welcome-dialog {
+    @include container;
+}
+
+#dialogContent_welcome-dialog p {
+    font-size: 16px;
+}
+
+#dialogContent_welcome-dialog > div {
+    margin: auto;
+    padding: 20px;
+}
+
+#dialogContent_welcome-dialog > .content {
+    width: 800px;
+    padding-left: 0;
+    @include container(true);
+}
+
+#dialogContent_welcome-dialog > .animation {
+    padding-right: 0;
+}
+
+#dialogContent_welcome-dialog #animation {
+    background-color: #4a2a09;
+}
+
+#dialogContent_welcome-dialog img {
+    height: 40px;
+    margin: auto;
+}
+
+#dialogContent_welcome-dialog img.help {
+    margin-bottom: 10px;
+}
+
+#dialogContent_welcome-dialog .social {
+    @include container;
+}
+
+#dialogContent_welcome-dialog .social a {
+    @include container(true);
+    text-decoration: none;
+    margin: auto;
+}
+
+#dialogContent_welcome-dialog .social span {
+    margin: auto auto 10px auto;
+}

@@ -1,0 +1,42 @@
+<md-dialog id="welcome-dialog" aria-label="welcome-dialog">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 ng-bind="'WELCOME_TITLE' | translate"></h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="closeDialog()">
+        <md-icon md-svg-src="{{ closeImgPath }}" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <div class="animation">
+      <canvas id="animation" width="260" height="260"></canvas>
+    </div>
+    <div class="content">
+      <p ng-bind="'WELCOME_CONTENT_TITLE' | translate"></p>
+      <p ng-bind="'WELCOME_CONTENT' | translate"></p>
+      <img class="help" ng-src="{{helpImgPath}}">
+      <p ng-bind="'WELCOME_SOCIAL' | translate"></p>
+      <p ng-bind="'WELCOME_END' | translate"></p>
+      <div class="social">
+        <a href="https://twitter.com/Miysis_Dofus" target="_blank">
+          <span ng-bind="'MY_TWITTER' | translate">Mon Twitter</span>
+          <img ng-src="{{twitterImgPath}}">
+        </a>
+        <a href="https://twitter.com/Sweet_ovh" target="_blank">
+          <span ng-bind="'WEBSITE_TWITTER' | translate"></span>
+          <img ng-src="{{twitterImgPath}}">
+        </a>
+        <a href="https://www.youtube.com/channel/UCLuxufWVaxV61zx7uPt52Lw" target="_blank">
+          <span ng-bind="'YOUTUBE_CHANNEL' | translate">Ma chaîne YouTube</span>
+          <img ng-src="{{youtubeImgPath}}">
+        </a>
+      </div>
+    </div>
+  </md-dialog-content>
+
+  <md-dialog-actions>
+    <a class="btn btn-dialog-close" ng-click="closeDialog()" ng-bind="'CLOSE_BTN' | translate"></a>
+  </md-dialog-actions>
+</md-dialog>

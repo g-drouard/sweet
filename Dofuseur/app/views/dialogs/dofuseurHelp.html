@@ -1,0 +1,279 @@
+<md-dialog id="dofuseur-help-dialog" aria-label="dofuseur-help-dialog">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 ng-bind="'DOFUSEUR_HELP_TITLE' | translate"></h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="closeDialog()">
+        <md-icon md-svg-src="{{ closeImgPath }}" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <md-tabs md-dynamic-height md-border-bottom md-selected="selectedIndex">
+      <md-tab label="{{ 'DOFUSEUR_HELP_RULES_TITLE' | translate }}">
+        <md-content class="md-padding">
+          <div>
+            <p id="dofuseur-help-content-title" ng-bind="'DOFUSEUR_HELP_RULES_CONTENT_1' | translate"></p>
+          </div>
+          <div>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_2' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_3' | translate }}
+              <img ng-src="{{ tileImgPath }}">.
+            </p>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_4' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_5' | translate }}
+            </p>
+            <ul>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_6' | translate }}
+                  <img ng-src="{{ emptyTileImgPath }}">
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_7' | translate }}
+                  <img ng-src="{{ dofusTileImgPath }}">
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_8' | translate }}
+                  <img ng-src="{{ bombImgPath }}">
+                </p>
+              </li>
+            </ul>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_9' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_10' | translate }}
+              <img ng-src="{{ leftClickImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_11' | translate }}
+            </p>
+            <p ng-bind="'DOFUSEUR_HELP_RULES_CONTENT_12' | translate"></p>
+            <ul>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_13' | translate }}
+                  <img ng-src="{{ emptyTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_14' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_15' | translate }}
+                  <img ng-src="{{ tileImgPath }}"> ->
+                  <img ng-src="{{ emptyTileNumberImgPath }}">
+                </p>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_16' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_17' | translate }}
+                  <img ng-src="{{ tileImgPath }}"> ->
+                  <img ng-src="{{ emptyTileImgPath }}">
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_13' | translate }}
+                  <img ng-src="{{ dofusTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_18' | translate }}
+                  <a ng-click="changeTab(2)" ng-bind="'DOFUSEUR_HELP_RULES_CONTENT_19' | translate"></a>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_13' | translate }}
+                  <img ng-src="{{ bombImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_20' | translate }}
+                  <img ng-src="{{ liveImgPath }}"> ->
+                  <img class="empty" ng-src="{{ liveImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_21' | translate }}
+                  <img ng-src="{{ liveImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_22' | translate }}
+                  <img ng-src="{{ liveImgPath }}"> ->
+                  <img class="empty" ng-src="{{ liveImgPath }}">
+                  {{ 'DOFUSEUR_HELP_RULES_CONTENT_23' | translate }}
+                </p>
+              </li>
+            </ul>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_24' | translate }}
+              <img ng-src="{{ timerImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_25' | translate }}
+            </p>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_26' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_27' | translate }}
+              <img ng-src="{{ bombImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_28' | translate }}
+              <img ng-src="{{ rightClickImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_29' | translate }}
+              <a ng-click="changeTab(1)" ng-bind="'DOFUSEUR_HELP_RULES_CONTENT_19' | translate"></a>.
+            </p>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_30' | translate }}
+              <img ng-src="{{ leftClickImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_31' | translate }}
+              <img ng-src="{{ timerImgPath }}">.
+            </p>
+            <p>
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_32' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_33' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_RULES_CONTENT_34' | translate }}
+            </p>
+            <p ng-bind="'DOFUSEUR_HELP_RULES_CONTENT_35' | translate"></p>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="{{ 'DOFUSEUR_HELP_STATUS_TITLE' | translate }}">
+        <md-content class="md-padding">
+          <div>
+            <p>
+              {{ 'DOFUSEUR_HELP_STATUS_CONTENT_1' | translate }}
+              <img ng-src="{{ rightClickImgPath }}">
+              {{ 'DOFUSEUR_HELP_STATUS_CONTENT_2' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_STATUS_CONTENT_3' | translate }}
+              <img ng-src="{{ tileImgPath }}">
+              {{ 'DOFUSEUR_HELP_STATUS_CONTENT_4' | translate }}
+            </p>
+            <img id="cycle" ng-src="{{ cycleImgPath }}">
+            <p ng-bind="'DOFUSEUR_HELP_STATUS_CONTENT_5' | translate"></p>
+            <ul>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_6' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_7' | translate }}
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_8' | translate }}
+                  <img ng-src="{{ bombTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_9' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_10' | translate }}
+                  <img ng-src="{{ bombImgPath }}">.
+                </p>
+                <p>
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_11' | translate }}
+                  <img ng-src="{{ bombTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_12' | translate }}
+                  <img ng-src="{{ bombTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_13' | translate }}
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_14' | translate }}
+                  <img ng-src="{{ unknowTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_15' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_16' | translate }}
+                  <img ng-src="{{ bombImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_17' | translate }}
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_18' | translate }}
+                  <img ng-src="{{ lockTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_19' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_20' | translate }}
+                  <img ng-src="{{ bombImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_21' | translate }}
+                  <img ng-src="{{ liveImgPath }}"> ->
+                  <img class="empty" ng-src="{{ liveImgPath }}">
+                  {{ 'DOFUSEUR_HELP_STATUS_CONTENT_22' | translate }}
+                </p>
+              </li>
+            </ul>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="{{ 'DOFUSEUR_HELP_DOFUS_TITLE' | translate }}">
+        <md-content class="md-padding">
+          <div>
+            <p ng-bind="'DOFUSEUR_HELP_DOFUS_CONTENT_1' | translate"></p>
+            <ul>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_2' | translate }}
+                  <img ng-src="{{ ebeneTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_3' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_4' | translate }}.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_5' | translate }}
+                  <img ng-src="{{ emeraudeTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_6' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_7' | translate }}.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_8' | translate }}
+                  <img ng-src="{{ ivoireTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_9' | translate }}
+                  <img ng-src="{{ liveImgPath }}">.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_10' | translate }}
+                  <img ng-src="{{ ocreTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_11' | translate }}
+                  <img ng-src="{{ timerImgPath }}">.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_12' | translate }}
+                  <img ng-src="{{ pourpreTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_13' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_14' | translate }}.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_15' | translate }}
+                  <img ng-src="{{ turquoiseTileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_16' | translate }}
+                  <img ng-src="{{ tileImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_17' | translate }}
+                  <img ng-src="{{ bombImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_18' | translate }}
+                  <img ng-src="{{ bombImgPath }}">
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_19' | translate }}.
+                </p>
+              </li>
+              <li>
+                <p>
+                  {{ 'DOFUSEUR_HELP_DOFUS_CONTENT_20' | translate }}
+                  <img class="empty" ng-src="{{ liveImgPath }}"> -> <img ng-src="{{ liveImgPath }}">.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-dialog-content>
+
+  <md-dialog-actions>
+    <a class="btn btn-dialog-close" ng-click="closeDialog()" ng-bind="'CLOSE_BTN' | translate"></a>
+  </md-dialog-actions>
+</md-dialog>

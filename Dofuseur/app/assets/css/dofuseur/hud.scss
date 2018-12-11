@@ -1,0 +1,138 @@
+@import "../utils";
+
+#hud, #dofus {
+    @include container(true);
+    height: 612px;
+    background-color: color(button, base);
+    border-style: groove;
+    border-color: rgb(244,204,53);
+    padding: 0 10px;
+}
+
+#hud {
+    margin: 0 0 auto auto;
+    border-width: 6px 0 6px 6px;
+}
+
+#dofus {
+    margin: 0 auto auto 0;
+    border-width: 6px 6px 6px 0;
+}
+
+#dofus img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 1s ease;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+ 
+#dofus img.found {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+#hud > img {
+    margin: auto 0 auto auto;
+}
+
+#lives {
+    margin: auto;
+    width: 200px;
+    margin: auto 0 auto auto;
+}
+
+    #lives > img {
+        float: right;
+    }
+
+    #lives > img.empty {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: all 1s ease;
+        -moz-transition: all 1s ease;
+    }
+
+.volume {
+    cursor: pointer;
+    margin: auto 0 auto auto;
+}
+
+#bombs {
+    padding: 6px;
+    background-color: #65c1db;
+    width: 160px;
+    @include container;
+    color: #000000;
+    border-radius: 4px;
+    margin: auto 0 auto auto;
+}
+
+#bombs.zero {
+    background-color: #2ecc71;
+}
+
+#bombs.negative {
+    background-color: #e74c3c;
+}
+
+#bombs > img {
+    width: 50px;
+    height: 50px;
+    margin: auto auto auto 0;
+}
+
+#hud span {
+    margin: auto;
+    font: normal 25px 'Rye';
+    vertical-align: middle;
+}
+
+#timer {
+    padding-right: 10px;
+    background-color: rgb(244,204,53);
+    width: 160px;
+    @include container;
+    color: #000000;
+    border-radius: 4px;
+    margin: auto 0 auto auto;
+}
+
+#timer.orange {
+    background-color: rgb(241,177,73);
+}
+
+#timer.red {
+    background-color: #e74c3c;
+}
+
+#timer > img {
+    margin: auto auto auto 0;
+}
+
+#level > span {
+    color: color(button, hover);
+}
+
+#level {
+    @include container;
+    margin: auto;
+}
+
+#options {
+    @include container;
+    margin: auto auto 150px auto;
+}
+
+#options div {
+    @include container;
+    margin: auto;
+}
+
+#options img {
+    margin: auto 10px;
+}

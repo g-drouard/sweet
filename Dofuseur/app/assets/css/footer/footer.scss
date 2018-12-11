@@ -1,0 +1,50 @@
+/* Footer CSS */
+
+footer {
+    display: flex;
+    position: absolute;
+    min-height: 13rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color:rgba(34,34,34,0.8);
+    z-index: 2;
+    text-align: center;
+    border-top: 1px solid rgb(102,180,6);
+}
+
+footer #footer-content {
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+
+footer #footer-content > div{
+    margin: auto;
+}
+
+footer #footer-content > div h1 {
+    font-size: 1.8rem;
+    font-style: italic;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 2rem;
+}
+
+footer #footer-content > div h2 {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+footer #footer-content #copyrights > div:first-child {
+    margin-bottom: 1rem;
+}
+
+footer #footer-content .social-network > img {
+    width: 3rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}

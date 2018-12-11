@@ -1,0 +1,46 @@
+<div id="footer-content">
+    <div class="col-xs-3">
+        <h2 ng-bind="'FOLLOW_US' | translate"></h2>
+        <a class="social-network" href="https://twitter.com/Sweet_ovh" target="_blank">
+            <md-tooltip ng-bind="'WEBSITE_TWITTER' | translate"></md-tooltip>
+            <img ng-src="{{ twitterImgPath }}" imageonload="imgLoaded()">
+        </a>
+        <a class="social-network" href="https://twitter.com/Miysis_Dofus" target="_blank">
+            <md-tooltip ng-bind="'MY_TWITTER' | translate"></md-tooltip>
+            <img ng-src="{{ twitterImgPath }}" imageonload="imgLoaded()">
+        </a>
+        <a class="social-network" href="https://www.youtube.com/channel/UCLuxufWVaxV61zx7uPt52Lw" target="_blank">
+            <md-tooltip ng-bind="'YOUTUBE_CHANNEL' | translate"></md-tooltip>
+            <img ng-src="{{ youtubeImgPath }}" imageonload="imgLoaded()">
+        </a>
+    </div>
+    <div class="col-xs-6">
+        <h1 ng-bind="'PURPOSE_HELP' | translate"></h1>
+        <ul class="list-inline">
+            <li ng-bind="'UNAVAILABLE' | translate"></li>
+            <!--<li ng-bind="'REPORT_BUG' | translate"></li>
+            <li ng-bind="'PURPOSE_UPGRADE' | translate"></li>
+            <li ng-bind="'PURPOSE_PICTURE' | translate"></li>
+            <li ng-bind="'CONTACT_US' | translate"></li>-->
+        </ul>
+    </div>
+    <div id="copyrights" class="col-xs-3">
+        <div>
+            {{ 'COPYRIGHT_1' | translate }}
+            <a href="http://www.freepik.com" target="_blank">
+                Freepik
+            </a>
+            {{ 'COPYRIGHT_2' | translate }}
+            <a href="http://www.flaticon.com" target="_blank">
+                www.flaticon.com
+            </a>
+            {{ 'COPYRIGHT_3' | translate }}
+            <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">
+                CC 3.0 BY
+            </a>
+        </div>
+        <div>
+            Artwork © Ankama Games
+        </div>
+    </div>
+</div>

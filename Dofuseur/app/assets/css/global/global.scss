@@ -1,0 +1,121 @@
+/* Global CSS */
+
+@font-face {
+    font-family: "Rye";
+    src: url("./fonts/Rye-Regular.ttf");
+}
+
+html.ready, body.ready {
+    height: inherit;
+    overflow: visible !important;
+}
+
+html,body {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+    position: relative;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+main.not-ready {
+    max-height: 100vh;
+}
+
+.btn-title {
+    font-family: "Rye", "Verdana", "Geneva", "Tahoma", "sans-serif";
+    text-transform: uppercase;
+    display: flex;
+}
+
+.btn-primary {
+    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+    text-transform: uppercase;
+    margin: auto;
+    padding: 1.5rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.btn-small {
+    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+    text-transform: uppercase;
+    margin: auto;
+    padding: 1rem;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    background-color: #FFFFFF;
+}
+
+.btn-dialog-close {
+    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+    text-transform: uppercase;
+    margin: auto;
+    padding: 1.5rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin: 2rem auto;
+    background-color: rgb(34,34,34);
+}
+
+.btn-dialog-close:hover {
+    color: #FFFFFF;
+    background-color: rgb(54,54,54);
+}
+
+md-toast {
+    margin-top: 5.5rem;
+    padding-top: 0;
+    position: fixed;
+}
+
+body.md-dialog-is-showing {
+    overflow: hidden;
+    top: 0px !important;
+}
+
+body md-toast.md-success-theme .md-toast-content {
+    background-color: #27ae60;
+    border-radius: 0 0 2px 2px;
+}
+
+body md-toast.md-error-theme .md-toast-content {
+    background-color: #e74c3c;
+    border-radius: 0 0 2px 2px; 
+}
+
+.md-dialog-container{
+    position:fixed !important;
+    height: 100vh !important;
+    top: 0px !important;
+}
+
+.md-button {
+    line-height: normal !important;
+}
+
+md-tooltip .md-content {
+    height: auto;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    outline: 0px;
+  }
+
+
+md-dialog-actions {
+    min-height: 101px !important;
+}

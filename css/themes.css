@@ -1,0 +1,114 @@
+.title{
+	margin-bottom:50px;
+	text-align:center;
+	color:#428bca;
+	font-size:6em;
+	text-shadow: 0 1px 0 #ccc,
+				 0 2px 0 #c9c9c9,
+				 0 3px 0 #bbb,
+				 0 4px 0 #b9b9b9,
+				 0 5px 0 #aaa,
+				 0 6px 1px rgba(0,0,0,.1),
+				 0 0 5px rgba(0,0,0,.1),
+				 0 1px 3px rgba(0,0,0,.3),
+				 0 3px 5px rgba(0,0,0,.2),
+				 0 5px 10px rgba(0,0,0,.25),
+				 0 10px 10px rgba(0,0,0,.2),
+				 0 20px 20px rgba(0,0,0,.15)
+}
+
+#change-doc{
+	text-align: center;
+	margin: 30px 0px;
+}
+
+.hidden{
+	display: none;
+}
+
+.btn-change{
+	font-weight: bold;
+	margin: 5px;
+}
+
+.btn-active{
+	background-color: #625bde !important;
+}
+
+.div-tab{
+	display: none;
+	margin-bottom: 50px;
+}
+
+.btn-hidden{
+	float: right;
+	margin: 0;
+}
+
+.div-info{
+	margin-bottom: 50px;
+	background-color: #428bca;
+    color: #fff;
+    padding: 15px;
+    font-size: 17px;
+	border-radius: 15px;
+	text-align: justify;
+}
+
+.div-info > p{
+	margin-bottom: 20px;
+}
+
+.div-info > p:last-child{
+	margin-bottom: 0px !important;
+}
+
+.div-text{
+	display: none;
+	margin-bottom: 50px;
+	background-color: #428bca;
+    color: #fff;
+    padding: 15px;
+    font-size: 17px;
+    text-align: justify;
+	border-radius: 15px;
+}
+
+.div-text > p{
+	margin-bottom: 20px;
+}
+
+.div-text > p:last-child{
+	margin-bottom: 0px !important;
+}
+
+
+a{
+	color: #0B0B61 !important;
+}
+
+.div-active{
+	display: block !important;
+}
+
+.align-right{
+	text-align: right;
+}
+
+.btn-display-text{
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+li{
+	margin-bottom: 10px;
+}
+
+.footer{
+	background-color: #428bca;
+    color: #fff;
+    padding: 15px;
+    font-size: 17px;
+	border-radius: 15px;
+	text-align: center;
+}

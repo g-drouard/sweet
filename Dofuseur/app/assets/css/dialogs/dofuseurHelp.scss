@@ -1,0 +1,54 @@
+@import "../utils";
+
+#dofuseur-help-dialog md-toolbar {
+    background-color: #25b7d3;
+}
+
+#dialogContent_dofuseur-help-dialog {
+    @include container(true);
+}
+
+#dialogContent_dofuseur-help-dialog p {
+    font-size: 16px;
+}
+
+#dialogContent_dofuseur-help-dialog div {
+    @include container(true);
+    margin: auto;
+    padding: 20px 50px;
+}
+
+#dialogContent_dofuseur-help-dialog li {
+    margin: 20px 0 20px 20px;
+}
+
+#dialogContent_dofuseur-help-dialog img {
+    height: 40px;
+    margin: 5px 0;
+}
+
+#dialogContent_dofuseur-help-dialog img.empty {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#dialogContent_dofuseur-help-dialog a {
+    cursor: pointer;
+}
+
+#dialogContent_dofuseur-help-dialog #dofuseur-help-content-title {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #25b7d3 !important;
+    background-color:#25b7d3 !important;
+}
+
+#dialogContent_dofuseur-help-dialog #cycle {
+    width: 200px;
+    height: 158px;
+    margin: auto;
+}

@@ -1,0 +1,229 @@
+<div id="dofuseur-view" disable-right-click>
+    <div id="dofuseur-content">
+        <div id="menu" ng-show="isMenu">
+            <img id="dofuseur-logo" ng-src="{{logoImgPath}}" imageonload="imgLoaded()">
+            <div id="menu-options" class="options">
+                <figure>
+                    <span class="tooltiptext">
+                        <p>
+                            <img ng-src="{{liveImgPath}}">
+                            <img ng-src="{{liveImgPath}}">
+                            <img ng-src="{{liveImgPath}}">
+                        </p>
+                        <p>
+                            50
+                            <img ng-src="{{bombImgPath}}">
+                        </p>
+                        <p>
+                            5 : 00
+                            <img ng-src="{{timerImgPath}}">
+                        </p>
+                    </span>
+                    <div ng-click="selectLevel('easy')">
+                        <span class="button">
+                            <img ng-src="{{easyImgPath}}">
+                            <p ng-bind="'EASY' | translate"></p>
+                        </span>
+                        <span class="button">
+                            <p ng-bind="'PLAY' | translate"></p>
+                        </span>
+                    </div>
+                </figure>
+                <figure>
+                    <span class="tooltiptext">
+                        <p>
+                            <img ng-src="{{liveImgPath}}">
+                            <img ng-src="{{liveImgPath}}">
+                        </p>
+                        <p>
+                            75
+                            <img ng-src="{{bombImgPath}}">
+                        </p>
+                        <p>
+                            6 : 30
+                            <img ng-src="{{timerImgPath}}">
+                        </p>
+                    </span>
+                    <div ng-click="selectLevel('medium')">
+                        <span class="button">
+                            <img ng-src="{{mediumImgPath}}">
+                            <p ng-bind="'MEDIUM' | translate"></p>
+                        </span>
+                        <span class="button">
+                            <p ng-bind="'PLAY' | translate"></p>
+                        </span>
+                    </div>
+                </figure>
+                <figure>
+                    <span class="tooltiptext">
+                        <p>
+                            <img ng-src="{{liveImgPath}}">
+                        </p>
+                        <p>
+                            100
+                            <img ng-src="{{bombImgPath}}">
+                        </p>
+                        <p>
+                            8 : 00
+                            <img ng-src="{{timerImgPath}}">
+                        </p>
+                    </span>
+                    <div ng-click="selectLevel('hard')">
+                        <span class="button">
+                            <img ng-src="{{hardImgPath}}">
+                            <p ng-bind="'HARD' | translate"></p>
+                        </span>
+                        <span class="button">
+                            <p ng-bind="'PLAY' | translate"></p>
+                        </span>
+                    </div>
+                </figure>
+                <figure>
+                    <div ng-click="showDofuseurHelpDialog($event)">
+                        <span class="button">
+                            <img ng-src="{{rulesImgPath}}">
+                            <p ng-bind="'RULES' | translate"></p>
+                        </span>
+                        <span class="button">
+                            <p ng-bind="'SEE' | translate"></p>
+                        </span>
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+
+        <div id="game" ng-show="!isMenu">
+            <img id="title" ng-src="{{logoImgPath}}" imageonload="imgLoaded()">
+            <div id="game-container">
+                <div id="hud">
+                    <div id="level">
+                        <md-tooltip ng-bind="getLevelName()"></md-tooltip>
+                        <span ng-bind="'LEVEL' | translate"></span>
+                        <img ng-src="{{levelImgPath}}" imageonload="imgLoaded()">
+                    </div>
+                    <div id="lives">
+                        <md-tooltip ng-bind="'REMAINING_LIVES' | translate"></md-tooltip>
+                        <img ng-repeat="live in lives" ng-class="{'empty' : !live.isFull}" class="live" ng-src="{{liveImgPath}}">
+                    </div>
+                    <div id="bombs" ng-class="{ 'negative' : bombs < 0, 'zero' : bombs == 0 }">
+                        <md-tooltip ng-bind="'REMAINING_BOMBS' | translate"></md-tooltip>
+                        <img ng-src="{{bombImgPath}}" imageonload="imgLoaded()">
+                        <span id="bombsValue" ng-bind="bombs"></span>
+                    </div>
+                    <div id="timer" ng-class="{ 'red' : timer <= 60, 'orange' : timer > 60 && timer <= 120 }">
+                        <md-tooltip ng-bind="'REMAINING_TIME' | translate"></md-tooltip>
+                        <img ng-src="{{timerImgPath}}" imageonload="imgLoaded()">
+                        <span id="timerValue" ng-bind="getTimerValue()"></span>
+                    </div>
+                    <div id="options">
+                        <div>
+                            <md-tooltip ng-bind="'MENU' | translate"></md-tooltip>
+                            <img ng-src="{{menuImgPath}}" ng-click="isPause = !isPause">
+                        </div>
+                        <div>
+                            <md-tooltip ng-bind="'VOLUME' | translate"></md-tooltip>
+                            <img ng-show="volume == 0" class="volume" ng-src="{{volume1ImgPath}}" ng-click="setVolume()" imageonload="imgLoaded()">
+                            <img ng-show="volume == 1" class="volume" ng-src="{{volume2ImgPath}}" ng-click="setVolume()" imageonload="imgLoaded()">
+                            <img ng-show="volume == 2" class="volume" ng-src="{{volume3ImgPath}}" ng-click="setVolume()" imageonload="imgLoaded()">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="canvas-holder">
+                    <canvas id="dofuseur" width="800" height="600"></canvas>
+                </div>
+                <div id="dofus">
+                    <div ng-repeat="dofus in dofuss">
+                        <md-tooltip ng-bind="getDofusName(dofus)"></md-tooltip>
+                        <img ng-class="{'found' : dofus.isFound}" class="dofusImg" ng-src="{{dofusImgPath(dofus.name)}}">
+                    </div>
+                </div>
+            </div>
+
+            <div id="pause" ng-show="isPause" ng-click="isPause = !isPause">
+                <div class="options">
+                    <figure>
+                        <div ng-click="reset()">
+                            <span class="button">
+                                <p ng-bind="'AGAIN' | translate"></p>
+                            </span>
+                            <span class="button">
+                                <p ng-bind="'AGAIN' | translate"></p>
+                            </span>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div ng-click="menu()">
+                            <span class="button">
+                                <p ng-bind="'MENU' | translate"></p>
+                            </span>
+                            <span class="button">
+                                <p ng-bind="'MENU' | translate"></p>
+                            </span>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="hit" ng-show="isHit">
+
+            </div>
+
+            <div id="gameover" ng-show="isGameover">
+                <img ng-src="{{gameoverImgPath}}" imageonload="imgLoaded()">
+                <div class="options">
+                    <figure>
+                        <div ng-click="reset()">
+                            <span class="button">
+                                <p ng-bind="'RETRY' | translate"></p>
+                            </span>
+                            <span class="button">
+                                <p ng-bind="'RETRY' | translate"></p>
+                            </span>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div ng-click="menu()">
+                            <span class="button">
+                                <p ng-bind="'MENU' | translate"></p>
+                            </span>
+                            <span class="button">
+                                <p ng-bind="'MENU' | translate"></p>
+                            </span>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="victory" ng-show="isVictory">
+                <img ng-src="{{victoryImgPath}}" imageonload="imgLoaded()">
+                <div class="options">
+                    <figure>
+                        <div ng-click="reset()">
+                            <span class="button">
+                                <p ng-bind="'AGAIN' | translate"></p>
+                            </span>
+                            <span class="button">
+                                <p ng-bind="'AGAIN' | translate"></p>
+                            </span>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div ng-click="menu()">
+                            <span class="button">
+                                <p ng-bind="'MENU' | translate"></p>
+                            </span>
+                            <span class="button">
+                                <p ng-bind="'MENU' | translate"></p>
+                            </span>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div id="unavailable" ng-show="!isMenu">
+            <h1 ng-bind="'UNAVAILABLE_DEVICE' | translate"></h1>
+        </div>
+    </div>
+</div>

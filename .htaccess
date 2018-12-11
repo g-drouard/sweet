@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+
+Options +FollowSymlinks -MultiViews
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+RewriteRule ^src/(.*)$ /$1 [L,R=301,NC]
+
+Redirect permanent /Portails /portails
+Redirect permanent /Serveurs /serveurs
+Redirect permanent /Login /login
+Redirect permanent /Register /register
+Redirect permanent /Profil /profil
+Redirect permanent /Edit /edit
+Redirect permanent /Ladder /ladder
+Redirect permanent /admin/users /admin/users.php
+Redirect permanent /Appli.php /serveurs
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (portails|profil|edit|voteban|confirmation|historique|resetpassword|editTest)/(.*) $1.php?id=$2
+
+</IfModule>

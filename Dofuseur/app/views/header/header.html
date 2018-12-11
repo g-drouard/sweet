@@ -1,0 +1,29 @@
+<!-- Navbar des actions utilitaires -->
+
+<nav id="nav">
+    <div clas="navbar-right" id="header-right-div" ng-mouseleave="displayLanguageList(false)">
+        <div class="header-right-actions">
+            <div class="header-right-actions">
+                <a class="header-link" id="help-link" ng-click="showHelpDialog($event)">
+                    <md-tooltip ng-bind="'HELP_TOOLTIP' | translate"></md-tooltip>
+                    <img class="noselect" ng-src="{{ helpImgPath }}" imageonload="imgLoaded()">
+                </a>
+
+                <!-- Changement de langue -->
+
+                <a class="header-link" id="language-current" ng-class="{'active' : isLanguagesList}" ng-mouseover="displayLanguageList(true)" ng-click="displayLanguageList(true)">
+                    <img class="noselect" ng-src="{{ languageImgPath(currentLanguage) }}" imageonload="imgLoaded()">
+                </a>
+            </div>
+        </div>
+        <div ng-show="isLanguagesList" id="language-list">
+            <ul>
+                <li ng-repeat="language in languages() track by $index" ng-click="updateLanguage(language)">
+                    <span ng-bind="language.name | translate"></span>
+                    <img class="noselect" ng-src="{{ languageImgPath(language) }}" imageonload="imgLoaded()">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>

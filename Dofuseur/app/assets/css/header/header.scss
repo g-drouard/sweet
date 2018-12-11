@@ -1,0 +1,132 @@
+/* Header CSS */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(34,34,34,0.8);
+    z-index: 2;
+    border-bottom: 0.5rem solid rgb(102,180,6);
+}
+
+    header.fullscreen {
+        display: none;
+    }
+
+    header #nav {
+        margin: auto;
+        max-width: 117rem;
+        display: flex;
+        height: 5rem;
+    }
+
+    header #nav #header-right-div {
+        margin-left: auto;
+        height: 100%;
+    }
+
+    header #nav #header-right-div #language-list {
+        background-color: #f9f9f9;
+        min-width: 15rem;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        position: relative;
+    }
+
+    header #nav #header-right-div #language-list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    header #nav #header-right-div #language-list ul li {
+        display: flex;
+        margin: 0;
+        padding: 1rem 0;
+        cursor: pointer;
+    }
+
+    header #nav #header-right-div #language-list ul li:hover {
+        background-color: rgb(102,180,6);
+    }
+
+    header #nav #header-right-div #language-list ul li span {
+        margin: auto;
+        height: auto;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    header #nav #header-right-div #language-list ul li img{
+        height: 3rem;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+    header #nav #header-right-div .header-link {
+        display: flex;
+        height: 100%;
+        margin-left: auto;
+        width: 5rem;
+    }
+
+    header #nav #header-right-div #achievement-link img {
+        height: 4rem;
+    }
+
+    header #nav #header-right-div #ornaments-titles-link img {
+        height: 4rem;
+    }
+
+    header #nav #header-right-div #ornaments-titles-link::after {
+        content: attr(data-after-content);
+        position: absolute;
+        background-color: rgb(231,76,60);
+        border-radius: 50%;
+        margin-left: 2.5rem;
+        margin-top: 2.3rem;
+        color: white;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+    }
+
+    header #nav #header-right-div #language-current.active {
+        background-color: rgb(102,180,6);
+    }
+
+    header #nav #header-right-div .header-link img {
+        margin: auto;
+        height: 3rem;
+    }
+
+    header #nav .header-right-actions {
+        display: flex;
+        height: 100%;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    header #nav-menu {
+        background-color: transparent;
+        padding: 0 3rem;
+        height: 8rem;
+        margin: 0;
+        display: flex;
+        border-radius: 0;
+        border-bottom: 1px solid rgb(102,180,6);
+    }
+
+        header #nav-menu #logo-link {
+            position: absolute;
+            right: calc(50% - 7.5rem);
+            top: -73%;
+            height: 18rem;
+            padding: 0;
+            margin: auto;
+            opacity: 1;}
+
+        header #nav-menu #logo {
+            height: 100%;
+            cursor: pointer;
+        }

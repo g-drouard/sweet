@@ -1,0 +1,43 @@
+// base color defs
+$color-primary: #FFBB00;
+$color-button: #0969A2;
+$color-shade-amount: 15%;
+$color-trans-amount: 0.5;
+
+// color variable map
+$colors: (
+  text: $color-primary,
+  primary: (
+    base: $color-primary,
+    light: lighten($color-primary, $color-shade-amount),
+    dark: darken($color-primary, $color-shade-amount),
+    trans: transparentize($color-primary, $color-trans-amount)
+  ),
+  button: (
+    base: #454442,
+    hover: #fcfdf7
+  )
+);
+
+// retrieve color from $colors map ie. `color(base, primary)`
+@function color($color-name, $color-variant:null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}
+
+@mixin container($is-column:null) {
+
+  @if ($is-column != null) {
+    flex-direction: column;
+  }
+  @else {
+    flex-direction: row;
+  }
+  display: flex;
+  
+}
